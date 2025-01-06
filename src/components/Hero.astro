@@ -1,8 +1,30 @@
 ---
+import Badge from "./Badge.astro"
 import Section from "./Section.astro"
 ---
 
 <Section class="flex flex-col items-start gap-4">
-  <h1 class="text-4xl font-bold">Hey, soy Lucas!</h1>
-  <p class="text-balance text-lg text-start">Hace 4 años conocí el mundo del desarrollo web, hoy me apasiona crear sitios estáticos con html, sin css ni javascript</p>
+  <div class="grid grid-cols-12 grid-rows-10 gap-4 size-full">
+    <div class="bg-gradient-to-r from-slate-800 flex flex-col justify-evenly size-full col-span-8 row-span-6 rounded-2xl">
+      <div>
+        <h1 class="text-6xl text-white">Lucas Lopez</h1>
+        <h2 class="text-2xl text-gray-400">Desarrollador Full Stack</h2>
+      </div>
+      <p class="text-2xl text-balance text-gray-300">Especializado en el desarrollo de aplicaciones web únicas</p>
+    </div>
+    <div class="grid place-items-center size-full col-span-4 row-span-6 rounded-2xl aspect-square">
+      <img class="size-48 rounded-full" src="/me-black-and-white.webp" />
+    </div>
+    <div class="flex justify-around items-center size-full col-span-4 row-span-2 rounded-2xl">
+      <div class="bg-red-400/30 size-16 rounded-xl"></div>
+      <div class="bg-red-400/30 size-16 rounded-xl"></div>
+      <div class="bg-red-400/30 size-16 rounded-xl"></div>
+    </div>
+    <div class="bg-gradient-to-tl flex justify-center items-center to-[90%] from-slate-800 size-full col-span-8 row-span-4 rounded-2xl">
+      <p class="text-xl text-balance">+15 años de experiencia. Ingeniero de Software y Creador de Contenido sobre Programación de Barcelona, España 🇪🇸. </p>
+    </div>
+    <div class="size-full col-span-4 row-span-2 ">
+      <Badge class="size-full rounded-2xl">Disponible para trabajar</Badge>
+    </div>
+  </div>
 </Section>
