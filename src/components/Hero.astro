@@ -1,30 +1,39 @@
 ---
 import Badge from "./Badge.astro"
+import Gmail from "./icons/Gmail.astro"
+import LinkedIn from "./icons/LinkedIn.astro"
 import Section from "./Section.astro"
+import GithubIcon from '@/components/icons/Github.astro'
 ---
 
 <Section class="flex flex-col items-start gap-4">
   <div class="grid grid-cols-12 grid-rows-10 gap-4 size-full">
-    <div class="bg-gradient-to-r from-slate-800 flex flex-col justify-evenly size-full col-span-8 row-span-6 rounded-2xl">
+    <div class="bg-gradient-to-br from-slate-800 grid place-items-center size-full col-span-4 row-span-6 rounded-2xl aspect-square">
+      <img class="size-48 rounded-full" src="/me-black-and-white.webp" />
+    </div>
+    <div class="bg-gradient-to-bl from-slate-800 flex flex-col justify-evenly size-full col-span-8 row-span-6 rounded-2xl">
       <div>
         <h1 class="text-6xl text-white">Lucas Lopez</h1>
         <h2 class="text-2xl text-gray-400">Desarrollador Full Stack</h2>
       </div>
       <p class="text-2xl text-balance text-gray-300">Especializado en el desarrollo de aplicaciones web únicas</p>
     </div>
-    <div class="grid place-items-center size-full col-span-4 row-span-6 rounded-2xl aspect-square">
-      <img class="size-48 rounded-full" src="/me-black-and-white.webp" />
-    </div>
-    <div class="flex justify-around items-center size-full col-span-4 row-span-2 rounded-2xl">
-      <div class="bg-red-400/30 size-16 rounded-xl"></div>
-      <div class="bg-red-400/30 size-16 rounded-xl"></div>
-      <div class="bg-red-400/30 size-16 rounded-xl"></div>
-    </div>
-    <div class="bg-gradient-to-tl flex justify-center items-center to-[90%] from-slate-800 size-full col-span-8 row-span-4 rounded-2xl">
+    <div class="bg-gradient-to-tr flex justify-center items-center from-slate-800 size-full col-span-8 row-span-4 rounded-2xl">
       <p class="text-xl text-balance">+15 años de experiencia. Ingeniero de Software y Creador de Contenido sobre Programación de Barcelona, España 🇪🇸. </p>
     </div>
-    <div class="size-full col-span-4 row-span-2 ">
-      <Badge class="size-full rounded-2xl">Disponible para trabajar</Badge>
+    <div class="flex justify-around items-center size-full col-span-4 row-span-2 rounded-2xl">
+      <a href="mailto:contact.lopezlucas@gmail.com" class="transition-all duration-200 hover:scale-105">
+        <Gmail class="size-12" />
+      </a>
+      <a href="https://www.linkedin.com/in/lucaslopezdev/" rel="noopener noreferer" target="_blank" class="transition-all duration-200 hover:scale-105">
+        <LinkedIn class="size-12" />
+      </a>
+      <a href="https://github.com/lucaslopezdev" rel="noopener noreferer" target="_blank" class="transition-all duration-200 hover:scale-105">
+      <GithubIcon class="size-12" />
+      </a>
     </div>
+    <a href="https://www.linkedin.com/in/lucaslopezdev/" rel="noopener noreferer" target="_blank" class="size-full col-span-4 row-span-2 ">
+      <Badge class="size-full rounded-2xl">Disponible para trabajar</Badge>
+    </a>
   </div>
 </Section>
